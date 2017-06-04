@@ -16,7 +16,7 @@ public class Main {
 		MinecraftForge.EVENT_BUS.register(new BlockBreakMessage());
 		MinecraftForge.EVENT_BUS.register(new ExplodingMinecarts());
 		MinecraftForge.EVENT_BUS.register(new ExplodingAnvils());
-		MinecraftForge.EVENT_BUS.register(new BiggerTNTExlposion());
+		MinecraftForge.EVENT_BUS.register(new BiggerTNTExplosionDelay());
 	}
 
 }
