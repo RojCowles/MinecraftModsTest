@@ -6,19 +6,21 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class BiggerTNTExlposion {
-	private float power = 32.0F;
-	
+
+
 	@SubscribeEvent
 	public void explode(EntityJoinWorldEvent event)
 	{
 		Entity entity = event.getEntity();
 		if (!(entity instanceof EntityTNTPrimed))
 		{
-			boolean isSmoking = true;
-			entity.getEntityWorld().createExplosion(entity, entity.posX, entity.posY, entity.posZ, power, isSmoking);
+			return;
 		}
 		
-		
+		boolean isSmoking = true;
+		float power = 32.0F;
+		entity.getEntityWorld().createExplosion(entity, entity.posX, entity.posY, entity.posZ, power, isSmoking);
+
 	}
 
 }
